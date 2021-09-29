@@ -26,7 +26,7 @@ echo "##### Cloning destination git repository #####"
 # Setup git
 git config --global user.email "$COMMIT_EMAIL"
 git config --global user.name "$DESTINATION_USERNAME"
-git clone --single-branch --branch "$DESTINATION_BRANCH" "https://$API_TOKEN_GITHUB@github.com/$DESTINATION_USERNAME/$DESTINATION_REPOSITORY.git" "$CLONE_DIRECTORY"
+git clone --depth 1 --single-branch --branch "$DESTINATION_BRANCH" "https://$API_TOKEN_GITHUB@github.com/$DESTINATION_USERNAME/$DESTINATION_REPOSITORY.git" "$CLONE_DIRECTORY"
 ls -la "$CLONE_DIRECTORY"
 
 echo
